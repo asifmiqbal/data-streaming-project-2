@@ -30,7 +30,7 @@ def run_spark_job(spark):
         .readStream \
         .format("kafka") \
         .option("kafka.bootstrap.servers", "localhost:9092") \
-        .option("subscribe", "calls") \
+        .option("subscribe", "com.udacity.crime.police-event") \
         .option("startingOffsets", "earliest") \
         .option("maxRatePerPartition", 100) \
         .option("maxOffsetPerTrigger", 100) \
