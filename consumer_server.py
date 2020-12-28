@@ -5,7 +5,7 @@ consumer = KafkaConsumer(bootstrap_servers='localhost:9092',
                          consumer_timeout_ms=1000)
 print('set consumer')
 
-consumer.subscribe(['department.call.service.log'])
+consumer.subscribe(['com.udacity.crime.police-event.log'])
 print('set subscribe')
 
 for message in consumer:
